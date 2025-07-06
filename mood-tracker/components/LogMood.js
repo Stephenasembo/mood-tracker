@@ -1,4 +1,4 @@
-import { Button, StyleSheet, Text, View, Image } from 'react-native';
+import { Button, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -19,41 +19,41 @@ export const LogMood = () => {
 
 const EmojiIcons = () => (
   <View style={styles.emojiLayout}>
-    <View>
+    <TouchableOpacity>
       <Image
       style={styles.emoji}
       source={require('../assets/happy.png')}
       />
       <Text>Happy</Text>
-    </View>
-    <View>
+    </TouchableOpacity>
+    <TouchableOpacity>
       <Image
       style={styles.emoji}
       source={require('../assets/neutral.png')}
       />
       <Text>Neutral</Text>      
-    </View>
-    <View>
+    </TouchableOpacity>
+    <TouchableOpacity>
       <Image
       style={styles.emoji}
       source={require('../assets/sad.png')}
       />
       <Text>Sad</Text>
-    </View>
-    <View>
+    </TouchableOpacity>
+    <TouchableOpacity>
       <Image
       style={styles.emoji}
       source={require('../assets/angry.png')}
       />
       <Text>Angry</Text>
-    </View>
-    <View>
+    </TouchableOpacity>
+    <TouchableOpacity>
       <Image
       style={styles.emoji}
       source={require('../assets/tired.png')}
       />
       <Text>Tired</Text>
-    </View>
+    </TouchableOpacity>
   </View>
 )
 
