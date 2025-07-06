@@ -4,14 +4,17 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { LogMood } from './components/LogMood';
 import { Homepage } from './components/Homepage'
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => (
-  <Stack.Navigator>
-    <Stack.Screen name='Homepage' component={Homepage} />
-    <Stack.Screen name='Log mood' component={LogMood} />
-  </Stack.Navigator>
+  <SafeAreaProvider>
+    <Stack.Navigator>
+      <Stack.Screen name='Homepage' component={Homepage} />
+      <Stack.Screen name='Log mood' component={LogMood} />
+    </Stack.Navigator>
+  </SafeAreaProvider>
 )
 
 export default function App() {
